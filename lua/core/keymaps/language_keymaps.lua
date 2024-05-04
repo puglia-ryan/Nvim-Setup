@@ -16,5 +16,5 @@ elseif vim.fn.expand("%:e") == "c" then
 elseif vim.fn.expand("%:e") == "go" then
   vim.keymap.set('n', 'ü', ':!go run %<CR>', {noremap = true, silent = true})
 elseif vim.fn.expand("%:e") == "rs" then
-  vim.keymap.set('n', 'ü', ':!rustc % && ./%:r<CR>', {noremap = true, silent = true})
+  vim.keymap.set('n', 'ü', ':!cargo run<CR>', {noremap = true, silent = true})
 end
