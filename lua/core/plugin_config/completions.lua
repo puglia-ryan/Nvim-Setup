@@ -21,7 +21,8 @@ cmp.setup({
     {name = 'pylsp', keyword_length = 2},
     {name = 'hls', keyword_length = 2},
     {name = 'rust_analyzer', keyword_length = 2},
-    {name = 'java_language_server', keyword_length = 2}
+    {name = 'java_language_server', keyword_length = 2},
+    {name = 'clangd', keyword_length = 1}
   },
   window = {
     documentation = cmp.config.window.bordered()
@@ -91,3 +92,14 @@ cmp.setup({
     end, {'i', 's'}),
   },
 })
+
+local nvim_lsp = require('lspconfig')
+
+--Setup clangd for C/C++
+nvim_lsp.clangd.setup {
+  cmd = {"clangd"},
+  filetypes = {"c", "cpp", "objc", "objcpp"},
+  root_dir = nvim_lsp.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+  single_file_support = true,
+  capabilities = require('cmp_nvim_lsp').default_capabilities()
+}
