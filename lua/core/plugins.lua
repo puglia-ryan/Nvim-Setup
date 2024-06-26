@@ -31,6 +31,11 @@ return require('packer').startup(function(use)
     tag = '0.1.6',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  --GitSigns
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
   --Autocompletion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
