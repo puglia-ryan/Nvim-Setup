@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig"
   }
+
+  --Nvim-lint
+  use 'mfussenegger/nvim-lint'
   --Autoclose brackets when created
   use 'm4xshen/autoclose.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
