@@ -36,6 +36,8 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = 'nvim-lua/plenary.nvim'
   }
+  --Fugitive
+  use 'tpope/vim-fugitive'
   --Autocompletion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
