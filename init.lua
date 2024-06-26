@@ -12,7 +12,7 @@ require("core.plugin_config.lualine")
 require("core.plugin_config.nvim-tree")
 require("core.plugin_config.treesitter")
 require("core.plugin_config.nvim-lint")
-
+require("core.plugin_config.conform")
 
 --Allow line numbering 
 vim.o.number = true

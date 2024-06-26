@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
 
   --Nvim-lint
   use 'mfussenegger/nvim-lint'
+
+  --conform.nvim (formatter)
+  use 'stevearc/conform.nvim'
   --Autoclose brackets when created
   use 'm4xshen/autoclose.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
