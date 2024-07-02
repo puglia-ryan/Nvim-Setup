@@ -1,5 +1,7 @@
+require("mason").setup()
+local servers = {"lua_ls", "pylsp", "rust_analyzer", "jdtls", "hls", "clangd"}
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls"}, {"pylsp"}, {"rust_analyzer"}, {"java_language_server"}, {"hls"}
+  ensure_installed = servers,
 })
 
 local lspconfig = require('lspconfig')
@@ -28,11 +30,12 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
-require("lspconfig").gopls.setup({})
-require("lspconfig").pylsp.setup({})
-require("lspconfig").rust_analyzer.setup({})
-require("lspconfig").java_language_server.setup({})
-require("lspconfig").hls.setup({})
+for _, lsp in ipairs(servers) do
+  require('lspconfig')[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilites,
+  }
+end
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
