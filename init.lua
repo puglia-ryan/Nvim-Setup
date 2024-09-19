@@ -1,5 +1,6 @@
 require("core.tabs_and_spacing")
 require("core.keymaps.language_keymaps")
+require("core.keymaps.keymaps")
 require("core.plugins")
 --All the files from plugin_config
 require("core.plugin_config.mason")
