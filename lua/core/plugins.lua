@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
 	--insert custom plugins here
-	
+
   --Packer
 	use("wbthomason/packer.nvim")
   --Catppuccin theme
@@ -33,16 +33,16 @@ return require("packer").startup(function(use)
 		tag = "0.1.6",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	
+
   --GitSigns
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
-	
+
   --Fugitive
 	use("tpope/vim-fugitive")
-	
+
   --Autocompletion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -60,7 +60,7 @@ return require("packer").startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
-  
+
   --Nvim-lint
 	use("mfussenegger/nvim-lint")
 
@@ -69,7 +69,7 @@ return require("packer").startup(function(use)
 
 	--Autoclose brackets when created
 	use("m4xshen/autoclose.nvim")
-	
+
   -- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
