@@ -1,6 +1,6 @@
 -- To trigger toggleterm, press control and backslash at the same time
 require("toggleterm").setup{
-  size = 20,                          -- Default terminal height (horizontal split)
+  size = 10,                          -- Default terminal height (horizontal split)
   open_mapping = [[<C-\>]],           -- Default keybinding to toggle the terminal
   hide_numbers = true,                -- Hide line numbers in the terminal
   shade_filetypes = {},
