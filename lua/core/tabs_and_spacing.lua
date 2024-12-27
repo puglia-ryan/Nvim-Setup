@@ -17,3 +17,10 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+
+
+--Line wrapping settings
+vim.opt.textwidth = 80
+vim.opt.wrapmargin = 0
+vim.opt.wrap = true
+vim.opt.linebreak = true
